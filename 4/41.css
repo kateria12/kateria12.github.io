@@ -1,0 +1,25 @@
+img{
+width:25%;
+margin: 20px;
+transition: 2s;
+}
+img:hover{
+box-shadow: 2px 2px 20px rgb(8, 8, 154);
+border-radius: 60px;
+}
+h1{
+text-align: center;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+}
+p{
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+color: rgb(31, 190, 137);
+text-decoration: none;
+}
+a:hover{
+text-decoration: line-through;
+text-shadow: 1px 1px 5px rgb(28, 208, 214);
+}
