@@ -1,0 +1,55 @@
+.s {
+    color: chartreuse;
+}
+
+img {
+    width: 100%;
+}
+
+.img-logo {
+    width: 100px;
+}
+
+.left-panda {
+    width: 150px;
+    position: fixed;
+    left: 0;
+    top: -30px;
+    z-index: 100;
+    transform: rotate(90deg);
+
+}
+
+.right-panda {
+    width: 150px;
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    transform: rotate(180deg);
+    z-index: 100;
+}
+
+.col-md-4{
+    color: chartreuse;
+}
+
+.text-1,.text-2,.text-3,.text-4{
+    color: chartreuse
+}
+.navbar{
+     background-image: url(img\ \(7\).jpg);
+}
+.nav-item {
+    background-color: #757575;
+    margin: 15px;
+    
+}
+.container-U{
+    background-image: url(img\ \(1\).jpg);
+    color: red;
+    text-align: center;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
