@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="long-slider">
+        <div class="arrow-left">
+            <p>&lsaquo;</p>
+        </div>
+        <div class="arrow-right">
+            <p>&rsaquo;</p>
+        </div>
+        <div class="images-wrap">
+            <div class="slider-item"><img src="1.jpg" alt=""></div>
+            <div class="slider-item"><img src="2.jpg" alt=""></div>
+            <div class="slider-item"><img src="3.jpg" alt=""></div>
+            <div class="slider-item"><img src="4.jpg" alt=""></div>
+            <div class="slider-item"><img src="5.jpg" alt=""></div>
+            <div class="slider-item"><img src="6.jpg" alt=""></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let btnLeft = document.querySelector(".arrow-left")
+        let btnRight = document.querySelector(".arrow-right")
+        let slider = document.querySelector(".images-wrap")
+
+        btnRight.onclick = function () {
+            let max = slider.scrollWidth - slider.clientWidth;
+
+            if (slider.scrollLeft >= max) {
+                slider.scrollLeft = 0
+            }
+
+            else {
+                slider.scrollLeft += 350
+            }
+        }
+
+        btnLeft.onclick = function () {
+          
+            if (slider.scrollLeft <= 0) {
+                slider.scrollLeft = slider.scrollWidth
+            }
+
+            else {
+                slider.scrollLeft -= 300
+            }
+        }
+
+    </script>
+</body>
+
+</html>
