@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+      <title>Dino</title>
+
+</head>
+
+<body>
+
+    <div class="game">
+        <div class="dino"></div>
+        <div class="cactus"></div>
+    </div>
+
+
+    <div class="score">
+        <p>Рахунок : <span class="p-score">0</span> </p>
+        <p>Рекорд : <span class="p-record">0</span> </p>
+    </div>
+
+    <script>
+        let game = document.querySelector('.game')
+        let dino = document.querySelector('.dino')
+        let cactus = document.querySelector('.cactus')
+
+        function jumpFunction() {
+            dino.classList.add('jump')
+
+            setTimeout(() => {
+                dino.classList.remove('jump')
+            }, 600);
+
+        }
+
+        document.body.addEventListener('click', function () {
+            jumpFunction()
+        })
+
+        window.addEventListener('keydown', function (eve) {
+            if (eve.code == 'Space' || eve.code == 'ArrowUp') {
+                jumpFunction();
+            }
+            else if (eve.code == 'KeyH') {
+                alert('ТА НЕ ЦЕ, В ДІНОЗАВРІКА НЕ ГРАВ?!?!');
+                document.body.style.backgroundColor = 'red'
+            }
+        })
+
+        
+            let pScore = document.querySelector('.p-score')
+            let pRecord = document.querySelector('.p-record')
+            let t = 0
+            let time = 0
+            let record = 0
+
+            if(localStorage.getItem('dino') !=null){
+                record = localStorage.getItem('dino')
+                pRecord.innerHTML = record
+            }
+        
+
+        function finish() {
+            t++;
+            if (t % 50 == 0) {
+                time++
+            }
+            pScore.innerHTML = time;
+
+            let x = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'))
+            let y = parseInt(window.getComputedStyle(dino).getPropertyValue('top'))
+
+            if (x > 100 && x < 130 && y > 110) {
+                alert('FINISHHH, YOU NOOB')
+
+                if (time > record) {
+                    record = time;
+                    pRecord.innerHTML = record;
+                    localStorage.setItem('dino', record)
+                }
+
+                t = 0
+                time = 0
+            }
+
+
+        }
+
+        setInterval(() => {
+            finish()
+        }, 10);
+
+    </script>
+
+
+
+</body>
+
+</html>
