@@ -20,7 +20,7 @@
         <input type="text" v-model="str">
         <button class="btn num" v-for="item in numbers" v-on:click="addToStr(item)">{{item}}</button>
         <button class="btn znaky" v-for="item in zn" v-on:click="addToStr(item)">{{item}}</button>
-        <button class="btn znaky"> Clear </button>
+        <button class="btn znaky" v-on:click="Clear()"> Clear </button>
         <button class="btn znaky" v-on:click="Calculate()"> = </button>
         </input>
     </div>
@@ -42,7 +42,8 @@
             methods: {
                 Clear() {
                     this.textUser = ''
-                }
+                },
+                
             }
         }
         Vue.createApp(app1).mount('.div-1')
@@ -66,7 +67,7 @@
                     this.str += item;
                 },
                 Calculate(){
-                    eval(this.str);
+                    this.str =   eval(this.str);
                 },
                 Clear(){
                     this.str = ''
