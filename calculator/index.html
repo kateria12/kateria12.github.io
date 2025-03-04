@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="div-1">
+        <input type="text" v-model="textUser">
+        <button v-on:click="Clear()">Очистити</button>
+        <p>{{textUser}}</p>
+    </div>
+
+    <div class="div-2">
+        <input type="text" v-model="str">
+        <button class="btn num" v-for="item in numbers" v-on:click="addToStr(item)">{{item}}</button>
+        <button class="btn znaky" v-for="item in zn" v-on:click="addToStr(item)">{{item}}</button>
+        <button class="btn znaky"> Clear </button>
+        <button class="btn znaky" v-on:click="Calculate()"> = </button>
+        </input>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+
+
+
+
+        let app1 = {
+            data() {
+                return {
+                    textUser: '',
+                }
+
+            },
+
+            methods: {
+                Clear() {
+                    this.textUser = ''
+                }
+            }
+        }
+        Vue.createApp(app1).mount('.div-1')
+
+
+
+        let app2 = {
+            data() {
+                return {
+                    numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
+                    zn: ['+', '-', '*', '/'],
+                    str: '',
+                }
+
+            },
+
+            methods: {
+
+                addToStr(item) {
+                    this.str = this.str.toString();
+                    this.str += item;
+                },
+                Calculate(){
+                    eval(this.str);
+                },
+                Clear(){
+                    this.str = ''
+                }
+            }
+        }
+        Vue.createApp(app2).mount('.div-2')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
