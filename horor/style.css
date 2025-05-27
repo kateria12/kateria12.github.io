@@ -1,0 +1,232 @@
+  html {
+      scroll-behavior: smooth;
+  }
+
+  .my-navbar {
+      background: #9d3c3c;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+.my-navbar a{
+    font-size: 1.5em;
+}
+  body {
+      background: #9d3c3c;
+      color: #000000f2;
+      line-height: 1.6;
+      font-family: "Caveat", cursive;
+      overflow-x: hidden;
+  }
+
+  nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+  }
+
+  nav ul li a {
+      color: rgb(255, 0, 0);
+      text-decoration: none;
+      font-weight: bold;
+  }
+
+  nav ul li a:hover {
+      text-decoration: underline;
+  }
+
+  .parallax {
+      position: relative;
+      min-height: 100vh;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+  }
+
+  .parallax .content {
+      background: rgba(208, 66, 66, 0.7);
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: center;
+  }
+
+  .about-moviw {
+      background: rgba(208, 66, 66, 0.7);
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: center;
+  }
+
+  .movie-poster {
+      margin-top: 1rem;
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+
+  footer {
+      background: #763c3c;
+      text-align: center;
+      padding: 1rem;
+  }
+
+  #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 24px;
+      padding: 10px 15px;
+      background-color: rgb(150, 32, 32);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+  }
+
+  #scrollTopBtn:hover {
+      background-color: rgb(217, 29, 29);
+  }
+
+  .toast-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 9999;
+      animation: arrow-top 1s infinite alternate;
+  }
+
+  .toast {
+      background-color: rgba(200, 0, 0, 0.9);
+      color: #fff;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+      font-weight: bold;
+      box-shadow: 0 0 10px #f00;
+  }
+
+  @keyframes arrow-top {
+      0% {
+          bottom: 20px;
+      }
+
+      100% {
+          bottom: 40px;
+      }
+  }
+
+  @keyframes fadein {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @keyframes fadeout {
+      from {
+          opacity: 1;
+          transform: translateY(0);
+      }
+
+      to {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+  }
+
+  #color {
+      transition-property: background-color;
+      transition-duration: 4s;
+      display: block;
+      margin: 20px auto;
+
+  }
+
+
+  p,
+  h1,
+  h2 {
+      animation-duration: 3s;
+      animation-name: slidein;
+  }
+
+  @keyframes slidein {
+      from {
+          margin-left: 100%;
+          width: 300%;
+      }
+
+      to {
+          margin-left: 0%;
+          width: 100%;
+      }
+  }
+
+  .carousel-slide {
+      position: relative;
+  }
+
+
+
+
+
+
+
+
+
+
+  img {
+      width: 100%;
+  }
+
+  header {
+      background: #a84040;
+      text-align: center;
+      padding: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  }
+
+  header h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+
+
+  .window-skrimer {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000000;
+     z-index: 100500;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: 0.8s;
+     display: none;
+     opacity: 0;
+  }
+  .wrap-img{
+    width: 80%;
+    user-select: none;
+  cursor: pointer;
+  }
